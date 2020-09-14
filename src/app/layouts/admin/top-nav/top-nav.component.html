@@ -1,0 +1,26 @@
+<div>
+    <mat-toolbar color="primary">
+        <button mat-icon-button (click)="sidenavToggle.emit()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>My Task - Enrollee Managment </span>
+        <span class="spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" >
+            <mat-icon>account_circle</mat-icon>
+        </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>perm_identity</mat-icon>
+              <span>Profile</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>vpn_key</mat-icon>
+                <span>Change Password</span>
+              </button>
+              <button mat-menu-item>
+              <mat-icon>login</mat-icon>
+              <span>Logout</span>
+            </button>
+          </mat-menu>
+    </mat-toolbar>
+</div>

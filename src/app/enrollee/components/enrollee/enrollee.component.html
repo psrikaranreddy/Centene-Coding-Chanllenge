@@ -1,0 +1,24 @@
+<div>
+    <div>
+        <mat-form-field appearance="legacy">
+            <mat-label>Name</mat-label>
+            <input matInput required name="name" [(ngModel)]="enrollee.name" #name placeholder="Name">
+        </mat-form-field>
+    </div>
+    <div class="mb-3">
+        <mat-label class="mr-2">Status</mat-label>
+        <mat-slide-toggle [(ngModel)]="enrollee.active"> {{enrollee.acrive?'Active':'In Active'}}</mat-slide-toggle>
+    </div>
+    <div>
+        <mat-form-field appearance="legacy">
+            <mat-label>Date of birth</mat-label>
+            <input matInput disabled name="dateofbirth" value="{{enrollee.dateOfBirth | date :'MM-dd-yyyy'}}" placeholder="Date of birth">
+        </mat-form-field>
+    </div>
+
+</div>
+
+<div class="text-right">
+    <button mat-raised-button class="mr-2" (click)="save()" color="primary">Save</button>
+    <button mat-raised-button color="accent" (click)="close()">Close</button>
+</div>

@@ -1,0 +1,8 @@
+<ul class="no-style menu">
+    <li *ngFor="let menu of menus" routerLinkActive="active">
+        <a [routerLink]="menu.link">
+            <mat-icon>{{menu.icon}}</mat-icon>
+            <span>{{menu.label}}</span>
+        </a>
+    </li>
+</ul>

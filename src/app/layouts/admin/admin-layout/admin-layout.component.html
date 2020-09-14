@@ -1,0 +1,11 @@
+<app-top-nav (sidenavToggle)="sideNav.toggle()"></app-top-nav>
+<mat-drawer-container class="main-container">
+    <mat-drawer mode="side" #sideNav opened>
+        <app-side-nav></app-side-nav>
+    </mat-drawer>
+    <mat-drawer-content class="page-content">
+        <mat-card>
+            <router-outlet></router-outlet>
+        </mat-card>
+    </mat-drawer-content>
+</mat-drawer-container>
